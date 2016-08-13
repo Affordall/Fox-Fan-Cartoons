@@ -5,6 +5,8 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.RecyclerView;
+import android.net.Uri;
+import android.widget.MediaController;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -14,6 +16,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.VideoView;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -25,6 +28,8 @@ public class MainActivity extends AppCompatActivity
     @Bind(R.id.drawer_layout) DrawerLayout drawer;
     @Bind(R.id.nav_view) NavigationView navigationView;
     @Bind(R.id.fab) FloatingActionButton fab;
+    //@Bind(R.id.video_view) VideoView videoView;
+    @Bind(R.id.video_player_standard) JCVideoPlayerStandard jcVideoPlayerStandard;
     //@Bind(R.id.rc_list) RecyclerView mRecyclerView;
     //@Bind(R.id.swipeContainer) SwipeRefreshLayout mSwipeRefreshLayout;
 
@@ -34,6 +39,18 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         setSupportActionBar(toolbar);
+
+//        MediaController vidControl = new MediaController(this);
+//        vidControl.setAnchorView(videoView);
+//        videoView.setMediaController(vidControl);
+//
+//        String vidAddress = "https://archive.org/download/ksnn_compilation_master_the_internet/ksnn_compilation_master_the_internet_512kb.mp4";
+//        //http://movies1.fox-fan.ru/video2/fjy5RuTJ75DUiyaphkbdyw/1471060984/familyguy/13/filiza/1301.mp4
+//        Uri vidUri = Uri.parse(vidAddress);
+//
+//        videoView.setVideoURI(vidUri);
+//        videoView.requestFocus();
+//        videoView.start();
 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
